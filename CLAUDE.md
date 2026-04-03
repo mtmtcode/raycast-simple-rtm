@@ -15,9 +15,8 @@ Raycast extension "Simple RTM" — Remember The Milk にタスクを追加する
 ## Project Structure
 
 ```
-simple-rtm/        # Raycast extension root
-  src/             # Source files
-  assets/          # Extension icons etc.
+src/             # Source files
+assets/          # Extension icons etc.
 ```
 
 ## Scope
@@ -32,7 +31,6 @@ simple-rtm/        # Raycast extension root
 ## Development
 
 ```bash
-cd simple-rtm
 npm run dev    # Start dev mode
 npm run build  # Build
 npm run lint   # Lint
