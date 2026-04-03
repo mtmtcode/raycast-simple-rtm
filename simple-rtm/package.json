@@ -13,22 +13,6 @@
     "Applications"
   ],
   "license": "MIT",
-  "preferences": [
-    {
-      "name": "apiKey",
-      "title": "RTM API Key",
-      "description": "Your Remember The Milk API Key",
-      "type": "textfield",
-      "required": true
-    },
-    {
-      "name": "sharedSecret",
-      "title": "RTM Shared Secret",
-      "description": "Your Remember The Milk Shared Secret",
-      "type": "password",
-      "required": true
-    }
-  ],
   "commands": [
     {
       "name": "add-task",
@@ -43,6 +27,12 @@
           "required": true
         }
       ]
+    },
+    {
+      "name": "logout",
+      "title": "Sign Out",
+      "description": "Sign out of Remember The Milk",
+      "mode": "no-view"
     }
   ],
   "dependencies": {

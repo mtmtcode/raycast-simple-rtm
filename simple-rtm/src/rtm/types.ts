@@ -50,7 +50,3 @@ export class RtmError extends Error {
   }
 }
 
-export interface RtmPreferences {
-  apiKey: string;
-  sharedSecret: string;
-}

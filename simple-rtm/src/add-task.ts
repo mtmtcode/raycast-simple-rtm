@@ -1,7 +1,8 @@
-import { showToast, Toast, LaunchProps, getPreferenceValues } from "@raycast/api";
+import { showToast, Toast, LaunchProps } from "@raycast/api";
 import { authenticate, AuthPendingError, clearToken } from "./rtm/auth";
 import { callApi } from "./rtm/client";
-import { RtmPreferences, RtmTimelineResponse, RtmAddTaskResponse, RtmError } from "./rtm/types";
+import { RtmTimelineResponse, RtmAddTaskResponse, RtmError } from "./rtm/types";
+import { RTM_API_KEY, RTM_SHARED_SECRET } from "./rtm/config";
 
 interface Arguments {
   taskName: string;
@@ -9,7 +10,8 @@ interface Arguments {
 
 export default async function Command(props: LaunchProps<{ arguments: Arguments }>) {
   const { taskName } = props.arguments;
-  const { apiKey, sharedSecret } = getPreferenceValues<RtmPreferences>();
+  const apiKey = RTM_API_KEY;
+  const sharedSecret = RTM_SHARED_SECRET;
 
   try {
     await showToast({ style: Toast.Style.Animated, title: "Adding task..." });
